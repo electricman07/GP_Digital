@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Mastery Details | GP Digital Web Studio</title> 
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">   
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.css" >
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <!-- Navbar Container Framework -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="./assets/images/Avatar50.png" alt="GP Digital Web Studio Logo">
+                <h1 class="logo-name">GP Digital Web Studio</h1>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <button id="theme-toggle" aria-label="Toggle Page Display Theme">
+                    <svg id="icon-moon" class="theme-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    <svg id="icon-sun" class="theme-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.22" x2="5.64" y2="17.78"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                    <div class="line line1"></div>
+                    <div class="line line2 ="></div>
+                    <div class="line line3"></div>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- Global Site Search Bar Container -->
+    <div class="global-search-bar">
+        <div class="container global-search-container">
+            <form action="kb.html" method="GET" class="global-search-form">
+                <div class="global-search-input-wrapper">
+                    <svg class="global-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" name="query" id="global-site-search" placeholder="Search the studio portfolio (e.g., SEO, portfolio, contact)..." aria-label="Global website search field">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Content Structural Region -->
+    <main>
+        <!-- Tech Detail Sub-Header Canvas -->
+        <section class="section tech-detail-hero">
+            <div class="hero-glow-orb"></div>
+            <div class="container tech-header-wrapper">
+                
+                <!-- Flat Text Non-Link Back Trigger -->
+                <p class="back-navigation-text" onclick="location.href='tech.html';">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    Back to Tech Stack Overview
+                </p>
+
+                <!-- Centered Headline Element Block -->
+                <div class="tech-profile-heading-block">
+                    <div class="tech-detail-icon-box js-color">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="21" y1="16" x2="16" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h2 class="tech-detail-title">JavaScript</h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Profile Performance Statistics Layer -->
+        <section class="section tech-detail-body-section">
+            <div class="container tech-detail-narrow-box">
+                <div class="tech-detail-main-card card">
+                    <p class="tech-description-paragraph">JavaScript forms the operational layer of our engineering framework. We utilize asynchronous loop scripts, native event handlers, and data tracking pipelines to run highly responsive applications. By avoiding heavy bloated dependencies, our logic layers render with pixel-perfection.</p>
+                    
+                    <!-- Dynamic Proficiency Metrics System -->
+                    <div class="proficiency-metric-wrapper">
+                        <div class="proficiency-header">
+                            <span class="label-heading">Technical Proficiency</span>
+                            <!-- Set your exact desired score variable inside data-percent -->
+                            <span class="percentage-display-node" id="prof-percent" data-percent="90">90%</span>
+                        </div>
+                        <div class="proficiency-track-bar">
+                            <div class="proficiency-fill-progress" id="prof-fill"></div>
+                        </div>
+                        <!-- Automated script text assignment placement string label -->
+                        <p class="proficiency-rank-badge">Knowledge Ranking: <strong id="prof-rank-string">Loading...</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Complement Swiper Carousels -->
+        <section class="section tech-detail-sliders-block">
+            <div class="container">
+                
+                <!-- Slider 1: Other Tech Tools Carousel -->
+                <div class="slider-header-strip">
+                    <h3>Other Technologies</h3>
+                    <a href="tech.html" class="slider-redirect-link">View Full Stack</a>
+                </div>
+                <div class="swiper other-tech-slider-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide tech-slider-card card" onclick="location.href='tech-detail.html';">
+                            <div class="tech-icon-plate html-color"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+                            <h4>HTML5</h4>
+                        </div>
+                        <div class="swiper-slide tech-slider-card card" onclick="location.href='tech-detail.html';">
+                            <div class="tech-icon-plate css-color"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline></svg></div>
+                            <h4>CSS3</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="slider-section-divider">
+
+                <!-- Slider 2: Related Case Studies Block -->
+                <div class="slider-header-strip">
+                    <h3>Related Projects</h3>
+                    <a href="portfolio.html" class="slider-redirect-link">View All Work</a>
+                </div>
+                <div class="swiper related-projects-slider-container">
+                    <div class="swiper-wrapper">
+                        <!-- Project Card Entry matching homepage styles -->
+                        <div class="swiper-slide project-card clickable-card card" onclick="location.href='project-detail.html'">
+                            <div class="project-img-container">
+                                <img src="./assets/images/websites/rylee_thumb.png" alt="Case Study Dashboard Preview">
+                            </div>
+                            <div class="card-content">
+                                <h3>Apex E-Commerce</h3>
+                                <a href="project-detail.html" class="project-link-action">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Complete Footer Component -->
+    <footer class="site-footer">...</footer>
+
+    <!-- Scripts Implementation Injection Pipeline -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+    
+    <!-- Dedicated Metrics Processor Logic Loop -->
+    <script>
+        window.addEventListener('load', () => {
+            const percentElement = document.getElementById('prof-percent');
+            const fillElement = document.getElementById('prof-fill');
+            const rankElement = document.getElementById('prof-rank-string');
+
+            if (percentElement && fillElement && rankElement) {
+                // Read score value dynamically out from HTML parameter container 
+                const score = parseInt(percentElement.getAttribute('data-percent'), 10) || 0;
+                
+                // 1. Force progression filler gauge adjustment width mapping
+                fillElement.style.width = score + "%";
+
+                // 2. Continuous evaluation processing tracking loops criteria thresholds
+                let evaluationLabel = "";
+                if (score < 50) {
+                    evaluationLabel = "Beginner";
+                } else if (score <= 85) {
+                    evaluationLabel = "Intermediate";
+                } else {
+                    evaluationLabel = "Industry Expert";
+                }
+
+                // 3. Print resulting evaluation label text back to DOM
+                rankElement.textContent = evaluationLabel;
+                console.log("Calculated skill ranking classification status successfully: " + evaluationLabel);
+            }
+
+            // Initialize Subpage Swiper Carousels
+            new Swiper('.other-tech-slider-container', { loop: true, slidesPerView: 2, spaceBetween: 20, breakpoints: { 650: { slidesPerView: 3 }, 950: { slidesPerView: 4 } } });
+            new Swiper('.related-projects-slider-container', { loop: true, slidesPerView: 1, spaceBetween: 20, breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } } });
+        });
+    </script>
+</body>
+</html>

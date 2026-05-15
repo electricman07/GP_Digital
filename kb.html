@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Base | GP Digital Web Studio</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">   
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <!-- Navbar Container Framework -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="./assets/images/Avatar50.png" alt="GP Digital Web Studio Logo">
+                <h1 class="logo-name">GP Digital Web Studio</h1>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <button id="theme-toggle" aria-label="Toggle Page Display Theme">
+                    <svg id="icon-moon" class="theme-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    <svg id="icon-sun" class="theme-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.22" x2="5.64" y2="17.78"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                    <div class="line line1"></div>
+                    <div class="line line2"></div>
+                    <div class="line line3"></div>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- Global Site Search Bar Container -->
+    <div class="global-search-bar">
+        <div class="container global-search-container">
+            <form action="kb.html" method="GET" class="global-search-form">
+                <div class="global-search-input-wrapper">
+                    <svg class="global-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" name="query" id="global-site-search" placeholder="Search the studio portfolio (e.g., SEO, portfolio, contact)..." aria-label="Global website search field">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Content Structural Region -->
+    <main>
+    <!-- Knowledge Base Hero Header & Search Field -->
+    <section class="section kb-hero-section">
+        <div class="hero-glow-orb"></div>
+        <div class="container kb-hero-container">
+            <h2 class="kb-title hero-title">Knowledge Base</h2>
+            <p class="kb-lead">Search technical documentation, deployment guides, site configuration metrics, and self-service maintenance workflows.</p>
+            
+            <!-- Search Input Container -->
+            <div class="kb-search-wrapper">
+                <div class="search-icon-lens">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </div>
+                <input type="text" id="kb-search-input" placeholder="Search documentation by keywords..." aria-label="Search articles inside the knowledge base">
+            </div>
+        </div>
+    </section>
+
+    <!-- Accordion Articles Listing Container Section -->
+    <section class="section kb-content-section">
+        <div class="container kb-split-layout-grid">
+            
+            <!-- Left Column: Filterable Accordion Items Area -->
+            <div class="kb-main-articles-column">
+                <div id="search-fallback-message" class="empty-search-alert" style="display: none;">
+                    <p>No documentation articles match your search parameters. Please try alternative keywords.</p>
+                </div>
+
+                <!-- Article Accordion Item 1 -->
+                <div class="kb-article-card card kb-accordion-item">
+                    <button class="kb-accordion-trigger" aria-expanded="false">
+                        <div class="kb-trigger-text">
+                            <span class="article-category-tag">Performance Mastery</span>
+                            <h3 class="article-question">Optimizing Image Container Core Rendering Performance</h3>
+                        </div>
+                        <svg class="accordion-arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="kb-accordion-content-panel">
+                        <div class="kb-accordion-inner-wrapper">
+                            <div class="kb-accordion-inner-text">
+                                <p>To reduce layout shifts and minimize render drops, explicitly map aspect-ratio parameters directly on raw image asset elements. Compress bitmaps using modern web formats like WebP or AVIF, and implement native <code>loading="lazy"</code> scripts to preserve bandwidth loops during standard initial screen paints.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article Accordion Item 2 -->
+                <div class="kb-article-card card kb-accordion-item">
+                    <button class="kb-accordion-trigger" aria-expanded="false">
+                        <div class="kb-trigger-text">
+                            <span class="article-category-tag">Theming System</span>
+                            <h3 class="article-question">Fixing Flashing Display Issues on Theme Toggle Switches</h3>
+                        </div>
+                        <svg class="accordion-arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="kb-accordion-content-panel">
+                        <div class="kb-accordion-inner-wrapper">
+                            <div class="kb-accordion-inner-text">
+                                <p>A common theme selection flashing error happens when scripts run after layout compilation. Fix this by placing your <code>localStorage.getItem('theme')</code> parsing evaluation block at the very top of your page head. This ensures the browser applies the active theme selector parameters before rendering core HTML body tag blocks.</p>
+                                <p>A common theme selection flashing error happens when scripts run after layout compilation. Fix this by placing your <code>localStorage.getItem('theme')</code> parsing evaluation block at the very top of your page head. This ensures the browser applies the active theme selector parameters before rendering core HTML body tag blocks.</p>
+                                <p>A common theme selection flashing error happens when scripts run after layout compilation. Fix this by placing your <code>localStorage.getItem('theme')</code> parsing evaluation block at the very top of your page head. This ensures the browser applies the active theme selector parameters before rendering core HTML body tag blocks.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article Accordion Item 3 -->
+                <div class="kb-article-card card kb-accordion-item">
+                    <button class="kb-accordion-trigger" aria-expanded="false">
+                        <div class="kb-trigger-text">
+                            <span class="article-category-tag">Form Security</span>
+                            <h3 class="article-question">Preventing Spam Drops on Contact Form Textareas</h3>
+                        </div>
+                        <svg class="accordion-arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="kb-accordion-content-panel">
+                        <div class="kb-accordion-inner-wrapper">
+                            <div class="kb-accordion-inner-text">
+                                <p>Protect your contact form data pathways from automated script spam by injecting a hidden honeypot field. Real users cannot see this input box layer, while automated scrapers will naturally fill it out. If your submission validation script detects data inside the honeypot input, discard the message block instantly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article Accordion Item 4 -->
+                <div class="kb-article-card card kb-accordion-item">
+                    <button class="kb-accordion-trigger" aria-expanded="false">
+                        <div class="kb-trigger-text">
+                            <span class="article-category-tag">Search Optimization</span>
+                            <h3 class="article-question">Setting Up Semantic HTML Rules for Technical SEO</h3>
+                        </div>
+                        <svg class="accordion-arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="kb-accordion-content-panel">
+                        <div class="kb-accordion-inner-wrapper">
+                            <div class="kb-accordion-inner-text">
+                                <p>Crawl engines prioritize semantic structure over stylized layouts. Ensure you run precisely one <code>h1</code> header tag per page to establish clarity. Group primary text clusters inside <code>main</code> tags and leverage descriptive meta tags to maximize link indexing depth metrics across web search results.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Interactive Categories Sidebar Aside -->
+            <aside class="kb-sidebar-column">
+                <div class="kb-sidebar-card card">
+                    <h4 class="sidebar-heading">Filter Categories</h4>
+                    <div class="sidebar-category-buttons-list">
+                        <button class="sidebar-category-btn" data-tag="Performance Mastery">Performance Mastery</button>
+                        <button class="sidebar-category-btn" data-tag="Theming System">Theming System</button>
+                        <button class="sidebar-category-btn" data-tag="Form Security">Form Security</button>
+                        <button class="sidebar-category-btn" data-tag="Search Optimization">Search Optimization</button>
+                        <button class="sidebar-category-btn btn-reset" id="clear-filters-btn">Show All Articles</button>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </section>
+</main>
+
+    <!-- Complete 12-Link Footer Component -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            
+            <!-- Grid Navigation Columns Framework -->
+            <div class="footer-grid">
+                <!-- Column 1: Core Navigation Pages -->
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 2: Business & Technical Services -->
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="tech.html">Tech Stack</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3: Help Desk & Documentation Indexes -->
+                <div class="footer-col">
+                    <h4>Support & Docs</h4>
+                    <ul class="footer-links">
+                        <li><a href="support.html">Support</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="kb.html">Knowledge Base</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Legal Framework Policies -->
+                <div class="footer-col">
+                    <h4>Legal Policies</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Secondary Compartment: Visual Assets Interactivity Elements Layer -->
+            <div class="footer-bottom-row">
+                <!-- Centered Copy of Vector Social Anchors -->
+                <div class="footer-socials">
+                    <a href="#" aria-label="Footer Link to X Profile"><svg class="social-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                    <a href="#" aria-label="Footer Link to LinkedIn Profile"><svg class="social-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                    <a href="#" aria-label="Footer Link to GitHub Repository"><svg class="social-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+                    <a href="#" aria-label="Footer Link to Facebook Business Page"><svg class="social-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                    <a href="#" aria-label="Footer Link to Instagram Media Stream"><svg class="social-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+                </div>
+
+                <!-- Auto-updating Copyright Text String -->
+                <p class="copyright-string">&copy; <span id="year-node"></span> GP Digital Web Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+    
+    <!-- JavaScript Filter and Accordion Engine Loop -->
+    <script>
+        window.addEventListener('load', () => {
+            const searchField = document.getElementById('kb-search-input');
+            const accordionItems = document.querySelectorAll('.kb-accordion-item');
+            const fallbackAlert = document.getElementById('search-fallback-message');
+
+            // --- 1. Real-Time Interactive Search Filter Mechanics ---
+            if (searchField) {
+                searchField.addEventListener('input', (e) => {
+                    const queryText = e.target.value.toLowerCase().trim();
+                    let matchingArticlesCount = 0;
+
+                    accordionItems.forEach(item => {
+                        // Close any open accordion item immediately during manual searches to prevent visual jumping
+                        item.classList.remove('is-open');
+                        const panel = item.querySelector('.kb-accordion-content-panel');
+                        if (panel) panel.style.maxHeight = null;
+
+                        const category = item.querySelector('.article-category-tag').textContent.toLowerCase();
+                        const question = item.querySelector('.article-question').textContent.toLowerCase();
+                        const bodyText = item.querySelector('.kb-accordion-inner-text').textContent.toLowerCase();
+
+                        if (category.includes(queryText) || question.includes(queryText) || bodyText.includes(queryText)) {
+                            item.style.display = ""; // Keep card frame layout target visible
+                            matchingArticlesCount++;
+                        } else {
+                            item.style.display = "none"; // Hide completely from active layouts
+                        }
+                    });
+
+                    fallbackAlert.style.display = (matchingArticlesCount === 0 && queryText !== "") ? "block" : "none";
+                });
+            }
+
+            // --- 2. Balanced Accordion Expansion Processing ---
+            accordionItems.forEach(item => {
+                const trigger = item.querySelector('.kb-accordion-trigger');
+                const panel = item.querySelector('.kb-accordion-content-panel');
+
+                if (trigger && panel) {
+                    trigger.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const isOpen = item.classList.contains('is-open');
+
+                        // Collapse all alternative cards running inside the active grid layer
+                        accordionItems.forEach(otherItem => {
+                            if (otherItem !== item) {
+                                otherItem.classList.remove('is-open');
+                                const otherPanel = otherItem.querySelector('.kb-accordion-content-panel');
+                                if (otherPanel) otherPanel.style.maxHeight = null;
+                            }
+                        });
+
+                        // Toggle current card active animation state profile
+                        if (isOpen) {
+                            item.classList.remove('is-open');
+                            panel.style.maxHeight = null;
+                        } else {
+                            item.classList.add('is-open');
+                            panel.style.maxHeight = panel.scrollHeight + "px"; // Dynamically tracks open container heights
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
