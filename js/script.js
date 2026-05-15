@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // --- 1. Global Selectors ---
+  //  Global Selectors ---
   const body = document.body;
   const themeToggle = document.getElementById("theme-toggle");
   const hamburger = document.getElementById("hamburger");
   const navLinks = document.querySelector(".nav-links");
   const yearContainer = document.getElementById("year-node");
 
-  // --- 2. Themes Initialization & Management ---
+  // Themes Initialization & Management ---
   const savedTheme =
     localStorage.getItem("theme") ||
     (window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- 3. Responsive Mobile Menu Drawer Controller ---
+  // Responsive Mobile Menu Drawer Controller ---
   if (hamburger && navLinks) {
     hamburger.addEventListener("click", (e) => {
       e.preventDefault();
@@ -49,12 +49,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // --- 4. Dynamic Footer Calendar Date Node ---
+  //  Dynamic Footer Calendar Date Node ---
   if (yearContainer) {
     yearContainer.textContent = new Date().getFullYear();
   }
 
-  // --- 5. FAQ Accordion Component Setup ---
+  //  FAQ Accordion Component Setup ---
   const faqItems = document.querySelectorAll(".faq-accordion-item");
   faqItems.forEach((item) => {
     const trigger = item.querySelector(".accordion-trigger");
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// --- 6. Global Helper Calculation Utilities (Available Globally) ---
+// Global Helper Calculation Utilities (Available Globally) ---
 function getProficiency(percent) {
   if (percent < 50) return "Beginner";
   if (percent <= 85) return "Intermediate";
@@ -137,7 +137,6 @@ window.addEventListener("load", () => {
         matchingArticlesCount++;
       } else {
         item.style.display = "none";
-        // Only collapse items that are actively being HIDDEN by a search query
         item.classList.remove("is-open");
         const panel = item.querySelector(".kb-accordion-content-panel");
         if (panel) panel.style.maxHeight = null;
@@ -150,7 +149,6 @@ window.addEventListener("load", () => {
     }
   }
 
-  // --- 2. Input Field Key Tracking Listener ---
   if (searchField) {
     searchField.addEventListener("input", (e) => {
       categoryButtons.forEach((btn) => btn.classList.remove("is-active"));
@@ -196,7 +194,7 @@ window.addEventListener("load", () => {
     executeLiveSearchFilter(passedQuery);
   }
 
-  // --- Knowledge Base Accordion Panel Dropdowns ---
+  // Knowledge Base Accordion Panel Dropdowns ---
   kbAccordionItems.forEach((item) => {
     const trigger = item.querySelector(".kb-accordion-trigger");
     const panel = item.querySelector(".kb-accordion-content-panel");
