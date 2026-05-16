@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
-  //  Global Selectors ---
+  // --- Global Selectors ---
   const body = document.body;
   const themeToggle = document.getElementById("theme-toggle");
   const hamburger = document.getElementById("hamburger");
   const navLinks = document.querySelector(".nav-links");
   const yearContainer = document.getElementById("year-node");
 
-  // Themes Initialization & Management ---
+  // --- Themes Initialization & Management ---
   const savedTheme =
     localStorage.getItem("theme") ||
     (window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Responsive Mobile Menu Drawer Controller ---
+  // --- Responsive Mobile Menu Drawer Controller ---
   if (hamburger && navLinks) {
     hamburger.addEventListener("click", (e) => {
       e.preventDefault();
@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Close mobile drawer menu when links are clicked
   document.querySelectorAll(".nav-links a").forEach((link) => {
     link.addEventListener("click", () => {
       body.classList.remove("menu-is-active");
@@ -49,12 +48,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  //  Dynamic Footer Calendar Date Node ---
+  // --- Dynamic Footer Calendar Date Node ---
   if (yearContainer) {
     yearContainer.textContent = new Date().getFullYear();
   }
 
-  //  FAQ Accordion Component Setup ---
+  // --- FAQ Accordion Component Setup ---
   const faqItems = document.querySelectorAll(".faq-accordion-item");
   faqItems.forEach((item) => {
     const trigger = item.querySelector(".accordion-trigger");
@@ -79,7 +78,6 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
 
-        // Toggle state
         if (isOpen) {
           item.classList.remove("is-open");
           panel.style.maxHeight = null;
@@ -94,13 +92,14 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Global Helper Calculation Utilities (Available Globally) ---
+// --- Global Helper Calculation Utilities (Available Globally) ---
 function getProficiency(percent) {
   if (percent < 50) return "Beginner";
   if (percent <= 85) return "Intermediate";
   return "Industry Expert";
 }
 
+// --- Heavy-Duty Knowledge Base System Engine ---
 window.addEventListener("load", () => {
   const searchField = document.getElementById("kb-search-input");
   const kbAccordionItems = document.querySelectorAll(".kb-accordion-item");
@@ -149,6 +148,7 @@ window.addEventListener("load", () => {
     }
   }
 
+  // --- Input Field Key Tracking Listener ---
   if (searchField) {
     searchField.addEventListener("input", (e) => {
       categoryButtons.forEach((btn) => btn.classList.remove("is-active"));
@@ -163,7 +163,7 @@ window.addEventListener("load", () => {
     });
   }
 
-  // Sidebar Category Button tracking loops
+  // --- Sidebar Category Button tracking loops ---
   categoryButtons.forEach((button) => {
     button.addEventListener("click", () => {
       const chosenTag = button.getAttribute("data-tag");
@@ -177,7 +177,7 @@ window.addEventListener("load", () => {
     });
   });
 
-  // Clear filters button operation click listener
+  // --- Clear filters button operation click listener ---
   if (clearButton) {
     clearButton.addEventListener("click", () => {
       categoryButtons.forEach((btn) => btn.classList.remove("is-active"));
@@ -186,7 +186,7 @@ window.addEventListener("load", () => {
     });
   }
 
-  // Global Inbound Search Routing Parameter Linkage
+  // --- Global Inbound Search Routing Parameter Linkage ---
   const urlParams = new URLSearchParams(window.location.search);
   const passedQuery = urlParams.get("query");
   if (passedQuery && searchField) {
@@ -194,7 +194,14 @@ window.addEventListener("load", () => {
     executeLiveSearchFilter(passedQuery);
   }
 
-  // Knowledge Base Accordion Panel Dropdowns ---
+  // ==========================================
+  // Global Navbar Search
+  // ==========================================
+  const globalSearchField = document.getElementById("global-site-search");
+  if (globalSearchField && passedQuery) {
+    globalSearchField.value = passedQuery;
+  }
+
   kbAccordionItems.forEach((item) => {
     const trigger = item.querySelector(".kb-accordion-trigger");
     const panel = item.querySelector(".kb-accordion-content-panel");
@@ -223,4 +230,73 @@ window.addEventListener("load", () => {
       });
     }
   });
+});
+
+// ==========================================================================
+//  Swiper Carousel Controller
+// ==========================================================================
+window.addEventListener("load", () => {
+  if (
+    !document.querySelector(".project-slider") &&
+    !document.querySelector(".blog-slider") &&
+    !document.querySelector(".service-slider") &&
+    !document.querySelector(".detail-services-slider") &&
+    !document.querySelector(".blog-carousel-slider")
+  )
+    return;
+
+  try {
+    Swiper.use([Swiper.Navigation, Swiper.Pagination, Swiper.Autoplay]);
+
+    const sharedCarouselConfigs = {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 25,
+
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+
+      breakpoints: {
+        650: { slidesPerView: 2 },
+        950: { slidesPerView: 3 },
+      },
+    };
+
+    if (document.querySelector(".project-slider")) {
+      new Swiper(".project-slider", sharedCarouselConfigs);
+    }
+    if (document.querySelector(".blog-slider")) {
+      new Swiper(".blog-slider", sharedCarouselConfigs);
+    }
+    if (document.querySelector(".service-slider")) {
+      new Swiper(".service-slider", sharedCarouselConfigs);
+    }
+    if (document.querySelector(".detail-services-slider")) {
+      new Swiper(".detail-services-slider", sharedCarouselConfigs);
+    }
+    if (document.querySelector(".blog-carousel-slider")) {
+      new Swiper(".blog-carousel-slider", sharedCarouselConfigs);
+    }
+    console.log(
+      "Swiper Modules integrated successfully! Autoplay and arrow clicks operational.",
+    );
+  } catch (error) {
+    console.error(
+      "Swiper initialization failed due to engine module locks:",
+      error,
+    );
+  }
 });

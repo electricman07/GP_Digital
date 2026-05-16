@@ -633,6 +633,28 @@ body[data-theme="dark"] .hero-title {
   }
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--primary-blue, #007bff) !important; /* Uses your primary theme corporate blue color */
+    transform: scale(0.65); /* Elegant shrink down brings buttons to professional proportions */
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+/* Hover rollover interactivity accent pop indicators */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    color: var(--text-color, #333333) !important;
+    transform: scale(0.72);
+}
+
+/* Squeeze spacing slightly inside narrow columns screens so arrows don't clip card boundaries */
+@media screen and (max-width: 650px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none !important; /* Best UX practice: Hide arrows on phones where finger swiping takes priority */
+    }
+}
+
 .project-card {
   background: var(--card-bg, #f8f9fa);
   border-radius: 12px;
