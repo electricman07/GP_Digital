@@ -2003,8 +2003,17 @@ body[data-theme="dark"] .services-hero-section .hero-glow-orb { opacity: 0.15; }
     text-align: left;
     max-width: 850px;
 }
-.services-title { font-size: 3rem; margin-bottom: 15px; }
-.services-lead { font-size: 1.2rem; line-height: 1.6; color: var(--text-color); opacity: 0.85; }
+.services-title { 
+  font-size: 3rem; 
+  margin-bottom: 15px; 
+}
+
+.services-lead { 
+  font-size: 1.2rem; 
+  line-height: 1.6; 
+  color: var(--text-color); 
+  opacity: 0.85; 
+}
 
 .services-content-section {
     background: var(--bg-color);
@@ -2209,6 +2218,9 @@ body[data-theme="dark"] .service-detail-hero {
     color: var(--primary-blue, #007bff);
 }
 
+.service-profile-block {
+  padding: 1rem;
+}
 .service-profile-block .service-profile-header {
     display: flex;
     flex-direction: column;
